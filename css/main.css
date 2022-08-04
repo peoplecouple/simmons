@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap');
 
-
-* {
-  outline: 1px solid #f00;
+:root {
+  --mc: #003399;
 }
+
+/* * {
+  outline: 1px solid #f00;
+} */
 
 .container {
   width: 1400px;
   margin: 0 auto;
 }
 
-.h2 {
+h2 {
   font-size: 40px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
+  text-align: center;
 }
 
 .flex_inner {
@@ -113,6 +117,14 @@
   padding: 100px 0;
 }
 
+.science .container {
+  position: relative;
+}
+
+.science .flex_inner {
+  justify-content: space-between;
+}
+
 .science h2 {
   margin-bottom: 60px;
 }
@@ -120,9 +132,396 @@
 .science .content_slide {
   width: 550px;
   height: 600px;
+  /* overflow: hidden; */
 }
 
 .science .content_slide figure {
   width: 550px;
   height: 600px;
+}
+
+.inline-YTPlayer {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+}
+
+.science .tab {
+  position: relative;
+}
+
+.science .tab ul {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  width: 150px;
+}
+
+.science .tab li {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.science .tab li.on {
+  color: #003399;
+  font-weight: 600;
+}
+
+.science .tab li:last-child {
+  margin-bottom: 0;
+}
+
+.science .text {
+  position: relative;
+}
+
+.science .text>div {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 325px;
+  transform: translateY(100px);
+  opacity: 0;
+
+}
+
+.science .text>div h3 {
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 45px;
+}
+
+.science .text>div p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.science .text>div.on {
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: 1s;
+}
+
+.science .control>div:nth-child(1) {
+  position: absolute;
+  top: 47%;
+  left: -20px;
+  width: 50px;
+  height: 150px;
+  border-left: 6px solid #ccc;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.science .control>div:nth-child(2) {
+  position: absolute;
+  top: 47%;
+  right: -20px;
+  width: 50px;
+  height: 150px;
+  border-right: 6px solid #ccc;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.science .control>div:nth-child(1):hover {
+  font-size: 15px;
+  border-radius: 50%;
+  transform: translateX(-15px);
+  transform-origin: center;
+}
+
+.science .control>div:nth-child(2):hover {
+  font-size: 15px;
+  border-radius: 50%;
+  transform: translateX(15px);
+  transform-origin: center;
+}
+
+
+
+.select {
+  padding: 100px 0;
+  background: #f7f7f7;
+}
+
+.select>p {
+  text-align: center;
+  font-size: 31px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.select>p:first-child {
+  margin-bottom: 20px;
+}
+
+.select>p:nth-child(2) {
+  margin-bottom: 40px;
+}
+
+.select>p select {
+  background: transparent;
+  color: #003399;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #003399;
+}
+
+.select>p option {
+  background: #fff;
+  font-size: 17px;
+  color: #000;
+}
+
+.select>p:first-child select {
+  width: 150px;
+  text-align: center;
+}
+
+.select p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.select p:nth-child(2) select {
+  display: none;
+}
+
+.select p:nth-child(2) select.on {
+  display: block;
+}
+
+.select p:nth-child(2) select:nth-child(1) {
+  width: 280px;
+  text-align: center;
+}
+
+.select p:nth-child(2) select:nth-child(2) {
+  width: 230px;
+  text-align: center;
+}
+
+.select p:nth-child(2) select:nth-child(3) {
+  width: 250px;
+  text-align: center;
+}
+
+.select p:nth-child(2) select:nth-child(4) {
+  width: 280px;
+  text-align: center;
+}
+
+.select .btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.select .btn>button {
+  border: none;
+  width: 180px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.select .btn>button:nth-child(1) {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.select .btn>button:nth-child(2) {
+  background: #333;
+  color: #fff;
+}
+
+
+.select_slide div {
+  margin-top: auto;
+  padding: 0 50px;
+  height: 100%;
+}
+
+.select_slide li .itm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* 여기서 슬라이드 그림 아래로 붙힘 */
+  height: 300px;
+}
+
+
+
+.product {
+  position: relative;
+  padding: 100px 0;
+}
+
+.product h2 {
+  margin-bottom: 40px;
+}
+
+.product .tab {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.product .tab li {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.product .tab li~li:before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background: #003399;
+  margin: 0 20px;
+}
+
+.product_slide .slick-list {
+  height: 0;
+}
+
+.product_slide.on .slick-list {
+  height: 100%;
+}
+
+.product_slide figure {
+  width: 800px;
+  padding: 0 20px;
+}
+
+.product_slide a {
+  width: 800px;
+
+}
+
+.product_slide .slick-slide {
+  width: 800px;
+}
+
+.product_slide img {
+  width: 100%;
+}
+
+.product .slick-dots {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 840px;
+}
+
+.product .slick-dots li {
+  display: inline-block;
+}
+
+.product .slick-dots li button {
+  width: 140px;
+  height: 6px;
+  font-size: 0;
+  border: none;
+  outline: none;
+  background: #bbb;
+}
+
+.product .slick-dots li.slick-active button {
+  background: #003399;
+}
+
+
+
+
+
+
+
+.product .control>div:nth-child(1) {
+  position: absolute;
+  top: 47%;
+  left: 230px;
+  width: 50px;
+  height: 150px;
+  border-left: 6px solid #ccc;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product .control>div:nth-child(2) {
+  position: absolute;
+  top: 47%;
+  right: 230px;
+  width: 50px;
+  height: 150px;
+  border-right: 6px solid #ccc;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product .control>div:nth-child(1):hover {
+  font-size: 15px;
+  border-radius: 50%;
+  transform: translateX(-15px);
+  transform-origin: center;
+}
+
+.product .control>div:nth-child(2):hover {
+  font-size: 15px;
+  border-radius: 50%;
+  transform: translateX(15px);
+  transform-origin: center;
+}
+
+
+
+.deco {
+  padding: 100px 0;
+}
+
+.deco h2 {
+  margin-bottom: 60px;
+}
+
+.deco .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deco .left p:nth-child(1) {
+  font-size: 21px;
+  font-weight: 400;
+  color: #003399;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 18px;
+}
+
+.deco .left p:nth-child(2) {
+  font-size: 31px;
+  font-weight: 400;
+  margin-bottom: 39px;
+  line-height: 1.2;
+}
+
+.deco .left .tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.deco .tab_content figure {
+  display: none;
+}
+
+.deco .tab_content figure.on {
+  display: block;
 }
