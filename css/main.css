@@ -58,7 +58,7 @@ h2 {
   line-height: 40px;
   padding: 0 30px;
   height: 100vh;
-  width: 400px;
+  width: 310px;
   font-size: 17px;
   background: white;
   transition: 1s;
@@ -71,9 +71,9 @@ h2 {
 }
 
 .gnb>li:first-child i {
-  line-height: 80px;
+  line-height: 90px;
   margin: 0 0 0 auto;
-  font-size: 31px;
+  font-size: 29px;
 }
 
 .gnb>li {
@@ -277,6 +277,7 @@ h2 {
 .science .text>div p {
   font-size: 17px;
   font-weight: 300;
+  color: #666;
   line-height: 1.2;
   transform: translateY(30px);
   transition: 1s .5s;
@@ -406,7 +407,7 @@ h2 {
 .select .btn>a:nth-child(1) {
   background: #fff;
   border: 1px solid #ccc;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .select .btn>a:nth-child(2) {
@@ -586,7 +587,7 @@ h2 {
 
 .deco .left p:nth-child(2) {
   font-size: 31px;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 39px;
   line-height: 1.2;
 }
@@ -870,6 +871,7 @@ h2 {
 .footer .top dl {
   display: flex;
   font-size: 15px;
+  font-weight: 300;
 }
 
 .footer .top dl dd~dd::before {
@@ -887,6 +889,8 @@ h2 {
 
 .footer .bottom {
   display: flex;
+  font-weight: 300;
+  font-size: 15px;
   justify-content: space-between;
 }
 
