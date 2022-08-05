@@ -264,6 +264,21 @@ h2 {
 } */
 
 
+.science .content_slide .vd_cover {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+.science .content_slide .vm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 850px;
+  height: 600px;
+  padding-bottom: 100% !important;
+}
+
 .science .text {
   position: relative;
 }
@@ -575,14 +590,13 @@ h2 {
   transform-origin: center;
 }
 
-.product>p{
-}
+.product>p {}
 
 /* product } */
 
 
 /* { deco */
-.deco::after{
+.deco::after {
   content: "";
   position: absolute;
   top: 0;
@@ -591,6 +605,7 @@ h2 {
   height: 1px;
   background: #ddd;
 }
+
 .deco {
   /* border-top: 1px solid #f2f2f2; */
   /* border- */
