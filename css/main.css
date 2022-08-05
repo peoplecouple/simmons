@@ -4,9 +4,9 @@
   --mc: #003399;
 }
 
-* {
+/* * {
   outline: 1px solid #f00;
-}
+} */
 
 .container {
   width: 1400px;
@@ -948,7 +948,7 @@ h2 {
   background: #003399;
   color: #fff;
   margin-right: 12px;
-  margin-top: 31px;
+  margin-top: 27px;
 }
 
 .footer .bottom .right a:last-child i {
