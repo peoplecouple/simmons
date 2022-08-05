@@ -113,22 +113,26 @@
             <div class="content_slide">
               <figure>
                 <div class="autopsy">
-                  <img src="img/science01.png" alt="">
-                  <img src="img/science02.png" alt="">
-                  <img src="img/science03.png" alt="">
-                  <img src="img/science04.png" alt="">
-                  <img src="img/science05.png" alt="">
-                  <img src="img/science06.png" alt="">
-                  <img src="img/science07.png" alt="">
+                  <div class="animate">
+                    <img src="img/science01.png" alt="">
+                    <img src="img/science02.png" alt="">
+                    <img src="img/science03.png" alt="">
+                    <img src="img/science04.png" alt="">
+                    <img src="img/science05.png" alt="">
+                    <img src="img/science06.png" alt="">
+                    <img src="img/science07.png" alt="">
+                  </div>
                   <img src="img/science08.png" alt="">
                 </div>
               </figure>
               <figure>
-                <div id="e_video"></div>
+                <div>
+                  <div id="e_video"></div>
+                </div>
               </figure>
               <figure>
-                <div id="p_video">
-
+                <div>
+                  <div id="p_video"></div>
                 </div>
               </figure>
             </div>
@@ -168,9 +172,8 @@
                 </h3>
                 <p>
                   꺼짐, 빈틈, 쏠림, 소음, <br>
-                  그리고 흔들림으로부터<br>
-                  자유롭게 어떤 몸 상태에도 <br>
-                  적용되는 포켓스프링으로 <br>
+                  그리고 흔들림이 없는 <br>
+                  포켓스프링으로 <br>
                   최상의 숙면 조건을 만듭니다.
                 </p>
               </div>
@@ -185,13 +188,12 @@
 
       <section class="select">
         <p>나는
-          <select name="" id="">
+          <select name="" id="category">
             <option value="">매트리스</option>
             <option value="">프레임</option>
             <option value="">소파</option>
             <option value="">베딩</option>
-          </select>
-          를 구매하고 싶어요.
+          </select>&nbsp;를 구매하고 싶어요.
         </p>
         <p>
           <select name="" id="" class="on">
@@ -202,24 +204,24 @@
           <select name="" id="">
             <option value="">모던한</option>
             <option value="">심플한</option>
-            <option value="">쿠션감이 있는</option>
+            <option value="">푹신한</option>
           </select>
           <select name="" id="">
+            <option value="">모듈화가 되는</option>
             <option value="">방수가 되는</option>
-            <option value="">천연 가죽 </option>
-            <option value="">모듈화가 가능한</option>
+            <option value="">천연 가죽인 </option>
+
           </select>
           <select name="" id="">
             <option value="">호텔 침구류 같은</option>
             <option value="">여름에 딱 맞는</option>
-            <option value="">폭신폭신한</option>
-          </select>
-          제품이 필요해요.
+            <option value="">아주 폭신폭신한</option>
+          </select>&nbsp;제품이 필요해요.
         </p>
 
         <div class="btn">
-          <button class="others">다른 조건 보기</button>
-          <button class="go">제품 보러 가기</button>
+          <a class="others">다른 조건 보기</a>
+          <a class="go">제품 보러 가기</a>
         </div>
 
         <ul class="select_slide">
@@ -268,7 +270,7 @@
         <div class="container">
           <h2>SIMMONS PRODUCT</h2>
           <ul class="tab">
-            <li><a href="">매트리스</a></li>
+            <li class="on"><a href="">매트리스</a></li>
             <li><a href="">프레임</a></li>
             <li><a href="">소파</a></li>
             <li><a href="">테이블</a></li>
@@ -287,12 +289,12 @@
             <figure>
               <a href=""><img src="img/mattress05.jpg" alt=""></a>
             </figure>
-            <figure>
+            <!-- <figure>
               <a href=""><img src="img/mattress06.jpg" alt=""></a>
             </figure>
             <figure>
               <a href=""><img src="img/mattress07.jpg" alt=""></a>
-            </figure>
+            </figure> -->
           </div>
 
           <div class="product_slide frame">
@@ -308,12 +310,12 @@
             <figure>
               <a href=""><img src="img/frame04.jpg" alt=""></a>
             </figure>
-            <figure>
+            <!-- <figure>
               <a href=""><img src="img/frame05.jpg" alt=""></a>
             </figure>
             <figure>
               <a href=""><img src="img/frame06.jpg" alt=""></a>
-            </figure>
+            </figure> -->
           </div>
 
           <div class="product_slide sofa">
@@ -364,7 +366,7 @@
               꾸미세요.
             </p>
             <div class="tab">
-              <figure>
+              <figure class="on">
                 <img src="img/deco01_small.jpg" alt="">
               </figure>
               <figure>
@@ -379,25 +381,119 @@
             <div class="tab_content">
               <figure class="on">
                 <img src="img/deco01.jpg" alt="">
+                <div class="circle circle_f"></div>
+                <div class="detail detail_f">
+                  <img src="img/deco_detail02.png" alt="">
+                  <p class="brand">SIMMONS</p>
+                  <p>Catol 스툴_브라운</p>
+                  <p>390,000 <span>20%</span></p>
+                </div>
+                <div class="circle circle_s"></div>
+                <div class="detail detail_s">
+                  <img src="img/deco_detail01.png" alt="">
+                  <p class="brand">KENOSHA</p>
+                  <p>Merte 소파_브라운</p>
+                  <p>1,050,000 <span>20%</span></p>
+                </div>
               </figure>
               <figure>
                 <img src="img/deco02.jpg" alt="">
+                <div class="circle circle_a"></div>
+                <div class="detail detail_a">
+                  <img src="img/deco_detail04-removebg-preview.png" alt="">
+                  <p class="brand">KENOSHA</p>
+                  <p>Lund 의자_블랙</p>
+                  <p>540,000 <span>10%</span></p>
+                </div>
+                <div class="circle circle_b"></div>
+                <div class="detail detail_b">
+                  <img src="img/deco_detail03-removebg-preview.png" alt="">
+                  <p class="brand">KENOSHA</p>
+                  <p>Lund 테이블_블랙</p>
+                  <p>3,900,000 <span>10%</span></p>
+                </div>
               </figure>
               <figure>
                 <img src="img/deco03.jpg" alt="">
+                <div class="circle circle_c"></div>
+                <div class="detail detail_c">
+                  <img src="img/deco_detail06-removebg-preview.png" alt="">
+                  <p class="brand">KENOSHA</p>
+                  <p>Catol 스툴_그레이</p>
+                  <p>390,000 <span>20%</span></p>
+                </div>
+                <div class="circle circle_d"></div>
+                <div class="detail detail_d">
+                  <img src="img/deco_detail07-removebg-preview.png" alt="">
+                  <p class="brand">SIMMONS</p>
+                  <p>Erdem 협탁_차콜</p>
+                  <p>1,050,000 <span>20%</span></p>
+                </div>
+                <div class="circle circle_e"></div>
+                <div class="detail detail_e">
+                  <img src="img/deco_detail05-removebg-preview.png" alt="">
+                  <p class="brand">SIMMONS</p>
+                  <p>Teano 프래임_네이비</p>
+                  <p>850,000 <span>20%</span></p>
+                </div>
               </figure>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="wed">
+        <div class="container">
+          <h3>WEDDING PROMOTION</h3>
+          <p>스페셜한 가격할인<br>
+            금액대 별 다양한 사은품 증정</p>
+          <div class="inner">
+            <a href="">more</a>
+            <span>- 일부 품목 제외 &nbsp;&nbsp; - 재고 소진 시 조기 종료될 수 있습니다.</span>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-
-
     <footer class="footer">
-
-    </footer>
+      <div class="container">
+        <div class="top">
+          <h1>
+            <a href=""><img src="img/logo.jpg" alt=""></a>
+          </h1>
+          <dl>
+            <dd><a href="">기업정보</a></dd>
+            <dd><a href="">공지사항</a></dd>
+            <dd><a href="">이용약관</a></dd>
+            <dd><a href="">개인정보처리방침</a></dd>
+            <dd><a href="">구매인증센터</a></dd>
+          </dl>
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <div>
+              <span>(주)Simmons Korea</span>
+              <span>대표 : 안청호</span>
+              <a href="tel:1899-8182"><span>고객센터 : 1899-8182</span></a>
+            </div>
+            <div>
+              <span>사업자등록번호 : 126-81-24808</span>
+              <span>주소 : 경기도 이천시 모가면 사실로 1000</span>
+              <span>통신판매업신고 : 제2014-경기이천-0135호</span>
+            </div>
+            <div>
+              <span>Copyright &copy; by SIMMONS-K Co., Ltd All Rights Reserved</span>
+            </div>
+          </div>
+          <div class="right">
+            <a href="https://www.instagram.com" target="_blank"><i class="xi-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="xi-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="xi-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+  </div>
+  </footer>
   </div>
 
 

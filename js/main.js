@@ -12,6 +12,7 @@ $(function () {
 
   $('.gnb>li>a').on('click', function (e) {
     e.preventDefault()
+    $(this).find('i').toggleClass('on')
     $(this).next().toggleClass('on')
     $(this).parent().siblings().find('ul').removeClass('on')
   })
@@ -28,11 +29,36 @@ $(function () {
     optimizeDisplay: true,
   });
 
-  $('.science .content_slide').on('init afterChange', function (e, s, c) {
+
+  // $(window).scroll(function () {
+
+  //   var height = $(document).scrollTop();
+  //   if ('1800' > height > '900') {
+  //     $('.science .content_slide').on('init afterChange', function (e, s, c) {
+  //       var idx = s.currentSlide;
+  //       var current = $('.slick-current')
+
+  //       $('.science .tab li').eq(idx).addClass('on').siblings().removeClass('on')
+  //       $('.science .text div').eq(idx).addClass('on').siblings().removeClass('on')
+  //       current.addClass('on').siblings().removeClass('on')
+  //     })
+  //   }
+  // })
+
+  $(window).scroll(function () {
+    var height = $(document).scrollTop();
+    var current = $('.slick-current')
+    if (height > '750') {
+      current.addClass('on').siblings().removeClass('on')
+    }
+  })
+
+  $('.science .content_slide').on('afterChange', function (e, s, c) {
     var idx = s.currentSlide;
+    var current = $('.slick-current')
+    current.addClass('on').siblings().removeClass('on')
     $('.science .tab li').eq(idx).addClass('on').siblings().removeClass('on')
     $('.science .text div').eq(idx).addClass('on').siblings().removeClass('on')
-
   })
 
   $('.science .content_slide').slick({
@@ -88,9 +114,16 @@ $(function () {
     cssEase: "linear",
   })
 
+
+
+  $('#category').change(function () {
+    var idx = $(this).children('option:selected').index();
+    $('.select p:nth-child(2) select').eq(idx).addClass('on').siblings().removeClass('on')
+  })
+
   $('.product_slide').slick({
     arrows: false,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -100,14 +133,14 @@ $(function () {
     centerMode: true,
     centerPadding: '260px',
     focusOnSelect: true,
-    //rows:2,
-    //slidesPerRow:3,
   })
 
 
   $('.product .tab li').on('click', function (e) {
     e.preventDefault();
     var idx = $(this).index();
+    $(this).addClass('on').siblings().removeClass('on')
+    $('.product .product_slide').slick('slickGoTo', 0);
     $('.product .product_slide').eq(idx).addClass('on').siblings().removeClass('on')
   })
 
@@ -123,6 +156,7 @@ $(function () {
 
   $('.deco .tab figure').on('click', function () {
     var idx = $(this).index();
+    $(this).addClass('on').siblings().removeClass('on')
     $('.deco .tab_content figure').eq(idx).addClass('on').siblings().removeClass('on')
   })
 })
