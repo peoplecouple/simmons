@@ -4,9 +4,9 @@
   --mc: #003399;
 }
 
-/* * {
+* {
   outline: 1px solid #f00;
-} */
+}
 
 .container {
   width: 1400px;
@@ -254,16 +254,7 @@ h2 {
   margin-bottom: 0;
 }
 
-/* .science .content_slide figure:nth-child(2){
-  position: relative;
-}
-
-.science .content_slide figure:nth-child(2)>div{
-  position: absolute;
-  width: 1000px;
-} */
-
-
+/* 동영상 크기조절 */
 .science .content_slide .vd_cover {
   position: relative;
   height: 700px;
@@ -276,7 +267,7 @@ h2 {
   left: 0;
   width: 850px;
   height: 600px;
-  padding-bottom: 100% !important;
+  padding-bottom: 110% !important;
 }
 
 .science .text {
