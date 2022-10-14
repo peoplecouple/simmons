@@ -1,5 +1,43 @@
 $(function () {
 
+  $(function () {
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 2; // 이벤트를 발생시킬 스크롤의 이동 범위
+    var navbarHeight = $("header").outerHeight();
+
+    $(window).scroll(function (event) {
+      didScroll = true;
+    });
+
+    setInterval(function () {
+      if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 0); // 스크롤이 멈춘 후 동작이 실행되기 까지의 딜레이
+
+    function hasScrolled() {
+      var st = $(this).scrollTop(); // 현재 window의 scrollTop 값
+
+      // delta로 설정한 값보다 많이 스크롤 되어야 실행된다.
+      if (Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+      if (st > lastScrollTop && st > navbarHeight) {
+        // 스크롤을 내렸을 때
+        $("header").hide(); // header 숨기기
+      } else {
+        // 스크롤을 올렸을 때
+        if (st + $(window).height() < $(document).height()) {
+          $("header").css("border-bottom", "1px solid #ddd");
+          $("header").show(); // header 보이기
+        }
+      }
+      lastScrollTop = st; // 현재 멈춘 위치를 기준점으로 재설정
+    }
+  })
+
   $('.header .left a').on('click', function (e) {
     e.preventDefault()
     $('.gnb').toggleClass('on')
@@ -8,6 +46,7 @@ $(function () {
   $('.gnb>li:first-child i').on('click', function (e) {
     e.preventDefault()
     $('.gnb').removeClass('on')
+    $('.gnb>li>a').find('i').removeClass('on')
   })
 
   $('.gnb>li>a').on('click', function (e) {
@@ -28,22 +67,6 @@ $(function () {
     playOnlyIfVisible: true,
     optimizeDisplay: true,
   });
-
-
-  // $(window).scroll(function () {
-
-  //   var height = $(document).scrollTop();
-  //   if ('1800' > height > '900') {
-  //     $('.science .content_slide').on('init afterChange', function (e, s, c) {
-  //       var idx = s.currentSlide;
-  //       var current = $('.slick-current')
-
-  //       $('.science .tab li').eq(idx).addClass('on').siblings().removeClass('on')
-  //       $('.science .text div').eq(idx).addClass('on').siblings().removeClass('on')
-  //       current.addClass('on').siblings().removeClass('on')
-  //     })
-  //   }
-  // })
 
   $(window).scroll(function () {
     var height = $(document).scrollTop();
@@ -105,7 +128,6 @@ $(function () {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 0,
-    //pauseOnHover:false,
     pauseOnFocus: false,
     dots: false,
     speed: 5000,
@@ -114,8 +136,6 @@ $(function () {
     cssEase: "linear",
   })
 
-
-
   $('#category').change(function () {
     var idx = $(this).children('option:selected').index();
     $('.select p:nth-child(2) select').eq(idx).addClass('on').siblings().removeClass('on')
@@ -123,7 +143,6 @@ $(function () {
 
   $('.product_slide').slick({
     arrows: false,
-    // autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -159,4 +178,9 @@ $(function () {
     $(this).addClass('on').siblings().removeClass('on')
     $('.deco .tab_content figure').eq(idx).addClass('on').siblings().removeClass('on')
   })
+
+  $('.deco .tab_content .circle').on('mouseover', function () {
+    $(this).addClass('on').siblings().removeClass('on')
+  })
+
 })

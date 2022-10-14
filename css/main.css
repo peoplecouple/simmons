@@ -4,10 +4,6 @@
   --mc: #003399;
 }
 
-/* * {
-  outline: 1px solid #f00;
-} */
-
 .container {
   width: 1400px;
   margin: 0 auto;
@@ -18,7 +14,7 @@ h2 {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   text-align: center;
-  letter-spacing: .1em;
+  letter-spacing: .2em;
 }
 
 .flex_inner {
@@ -27,7 +23,12 @@ h2 {
 
 /* { header */
 .header {
+  position: fixed;
+  width: 100%;
+  transition: top 0.2s ease-in-out;
+  z-index: 999;
   line-height: 80px;
+  background: #fff;
 }
 
 .header .container {
@@ -64,6 +65,7 @@ h2 {
   background: white;
   transition: 1s;
   z-index: 999;
+  border-right: 1px solid #ddd;
 }
 
 .gnb.on {
@@ -118,8 +120,9 @@ h2 {
 
 /* { main_visual */
 .main_visual {
-  padding: 0 0 100px 0;
-  height: calc(100vh - 80px);
+  margin: 0 0 0 0;
+  margin: 0 0 100px 0;
+  height: 100vh;
 }
 
 /*  main_visual } */
@@ -385,6 +388,7 @@ h2 {
   background: #fff;
   font-size: 17px;
   font-weight: 500;
+  text-align: center;
   color: #000;
 }
 
@@ -464,11 +468,11 @@ h2 {
 .product .tab {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .product .tab li {
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 300;
 }
 
@@ -636,11 +640,12 @@ h2 {
 }
 
 .deco .left .tab figure {
-  filter: brightness(30%)
+  border: 2px solid transparent;
+  transition: 0.5s;
 }
 
 .deco .left .tab figure.on {
-  filter: brightness(100%)
+  border: 2px solid rgba(0, 51, 153, 0.7);
 }
 
 .deco .tab_content figure {
@@ -653,10 +658,14 @@ h2 {
 }
 
 .deco .tab_content .circle {
+  position: relative;
   cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.5s;
 }
 
-.deco .tab_content .circle:hover+div {
+
+.deco .tab_content .circle.on+div {
   display: block;
 }
 
